@@ -2613,8 +2613,15 @@ module.exports = kconfig = async (kill, message) => {
 		case 'chance':
 			if (args.length == 0) return kill.reply(from, 'Defina algo para analisar.', id)
 			await kill.reply(from, `_De acordo com meus calculos super avançados de ~macaco femea~ robô "cuie" a chance de..._ \n\n*"${body.slice(8)}"*\n\n_...ser realidade é de_ *${lvpc}%.*`, id)
+			
 			break
 			
+		case 'lingua':   // lordzinho  comando de mostrar a lingua para alguem 
+			if (isGroupMsg && args.length == 1 && mentionedJidList.length !== 0) {
+				await kill.sendGiphyAsSticker(from, 'https://media.giphy.com/media/4QxQgWZHbeYwM/giphy.gif')
+				await kill.sendTextWithMentions(from, `YES BABY@${author.replace('@c.us', '')}  mostrou a lingua😝👅 para ${arqs[1]}! vixi eu n deixava essa passar`)
+			} else return await kill.reply(from, 'mostre sua lingua kkk.', id)
+            break
 			
         case 'kiss':
 			if (isGroupMsg && args.length == 1 && mentionedJidList.length !== 0) {
